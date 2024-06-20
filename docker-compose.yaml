@@ -1,0 +1,25 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./m347-ref-card-03-fe-main
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+     - my_network1
+  
+  backend:
+    build:
+      context: ./m347-ref-card-03-be-main
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+     - my_network1
+
+networks:
+  my_network1:
+    driver: bridge
