@@ -1,2 +1,4 @@
 # m347-project
-Docker
+to start the Project go start Docker 
+then
+`docker-compose up -d`
